@@ -4,6 +4,10 @@ export default css`
     display: inline-block;
   }
 
+  #list-root::-webkit-scrollbar, #list-root div::-webkit-scrollbar, #list-root ul::-webkit-scrollbar {
+    display: none;
+  }
+
   #list-root {
     position: absolute;
     z-index: 1;
@@ -14,14 +18,18 @@ export default css`
     padding: 0px;
     margin: 0px;
     max-height: 220px;
-    overflow-y: auto;
     background-color: #fff;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: auto;
   }
 
   #list-root div {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
   #list-root ul {
@@ -36,6 +44,8 @@ export default css`
     max-height: 220px;
     overflow-y: auto;
     background-color: #fff;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
   #list-root li {
@@ -67,7 +77,7 @@ export default css`
   }
 
   #list-root li:hover div {
-    display: inline-block;
+    display: block;
   }
 
   #list-root li:hover svg {

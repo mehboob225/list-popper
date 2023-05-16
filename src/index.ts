@@ -104,8 +104,13 @@ export class ListPopper extends LitElement {
   onLiHover(e: any) {
     const node = e.target;
     const rect = e.target.getBoundingClientRect();
+    const position = rect.right + rect.width;
+    let left = `${rect.right}px`;
+    if (position >= window.innerWidth) {
+      left = `${rect.left - rect.width - 5}px`;
+    }
     node.querySelector("div")?.style.setProperty("top", `${rect.top}px`);
-    node.querySelector("div")?.style.setProperty("right", `${rect.left+28}px`);
+    node.querySelector("div")?.style.setProperty("left", left);
     node.querySelector("div")?.style.setProperty("width", `${rect.width}px`);
   }
 
