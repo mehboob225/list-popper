@@ -1,0 +1,35 @@
+{
+  "name": "@rom-kit/list-popper",
+  "version": "1.0.0",
+  "description": "A simple list which will be popped on click of any parent. ",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehboob225/list-popper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mehboob225/list-popper/issues"
+  },
+  "scripts": {
+    "build": "rm -rf dist && rollup -c --bundleConfigAsCjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fuse.js": "6.6.2",
+    "lit": "2.7.4"
+  },
+  "devDependencies": {
+    "rollup": "3.21.6",
+    "rollup-plugin-commonjs": "10.1.0",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-terser": "7.0.2",
+    "rollup-plugin-typescript2": "0.34.1",
+    "tslib": "2.5.0",
+    "typescript": "5.0.4"
+  },
+  "files": [
+    "dist"
+  ]
+}
