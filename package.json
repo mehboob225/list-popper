@@ -1,6 +1,6 @@
 {
   "name": "@rom-kit/list-popper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple list which will be popped on click of any parent. ",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

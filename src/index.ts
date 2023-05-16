@@ -95,10 +95,10 @@ export class ListPopper extends LitElement {
   }
 
   handleOutsideClick = (e: Event) => {
-    if ((e.target as Node).nodeName !== "LIST-POPPER") {
-      this.open = false;
-      this.searchedItems = null;
-    }
+    if (this.shadowRoot.contains(e.target as Node)) return;
+    if ((e.target as Node).nodeName === "LIST-POPPER") return;
+    this.open = false;
+    this.searchedItems = null;
   };
 
   onLiHover(e: any) {
