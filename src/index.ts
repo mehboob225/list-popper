@@ -73,15 +73,7 @@ export class ListPopper extends LitElement {
   };
 
   handleSlotClick(e: Event) {
-    const assignedNodes = (
-      this.shadowRoot!.querySelector("slot") as HTMLSlotElement
-    ).assignedNodes();
-    if (assignedNodes.includes(e.target as Node)) {
-      const listRoot = this.shadowRoot!.querySelector(
-        "#list-root"
-      ) as HTMLSlotElement;
-      this.open = true;
-    }
+    this.open = true;
   }
 
   connectedCallback() {
@@ -97,6 +89,7 @@ export class ListPopper extends LitElement {
   handleOutsideClick = (e: Event) => {
     if (this.shadowRoot.contains(e.target as Node)) return;
     if ((e.target as Node).nodeName === "LIST-POPPER") return;
+    if (this.contains(e.target as Node)) return;
     this.open = false;
     this.searchedItems = null;
   };
