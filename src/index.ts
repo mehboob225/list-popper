@@ -105,7 +105,7 @@ export class ListPopper extends LitElement {
     const node = e.target;
     const rect = e.target.getBoundingClientRect();
     node.querySelector("div")?.style.setProperty("top", `${rect.top}px`);
-    node.querySelector("div")?.style.setProperty("left", `${rect.right}px`);
+    node.querySelector("div")?.style.setProperty("right", `${rect.left+28}px`);
     node.querySelector("div")?.style.setProperty("width", `${rect.width}px`);
   }
 

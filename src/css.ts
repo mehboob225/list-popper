@@ -15,6 +15,7 @@ export default css`
     margin: 0px;
     max-height: 220px;
     overflow-y: auto;
+    background-color: #fff;
   }
 
   #list-root div {
@@ -34,6 +35,7 @@ export default css`
     margin: 2px;
     max-height: 220px;
     overflow-y: auto;
+    background-color: #fff;
   }
 
   #list-root li {

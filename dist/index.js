@@ -48,6 +48,7 @@ const Gt=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?{...e
     margin: 0px;
     max-height: 220px;
     overflow-y: auto;
+    background-color: #fff;
   }
 
   #list-root div {
@@ -67,6 +68,7 @@ const Gt=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?{...e
     margin: 2px;
     max-height: 220px;
     overflow-y: auto;
+    background-color: #fff;
   }
 
   #list-root li {
@@ -133,7 +135,7 @@ const Gt=(t,e)=>"method"===e.kind&&e.descriptor&&!("value"in e.descriptor)?{...e
     height: 100%;
     padding: 0 10px;
   }
-`;let ee;let ie={includeScore:!1,shouldSort:!1,threshold:.6,location:0,distance:100,maxPatternLength:32,minMatchCharLength:1,keys:["label","items.label"]};class se extends Zt{constructor(){super(...arguments),this.onSelect=t=>{},this.label="",this.searchable=!1,this.searchPlaceholder="Search...",this.open=!1,this.event="click",this.items=[],this.searchedItems=null,this.onSearchkeyup=t=>{const e=t.target;var i,s;i=()=>{var t,i;if(!(null==e?void 0:e.value))return void(this.searchedItems=[...null!==(t=this.items)&&void 0!==t?t:[]]);const s=new J(this.items,ie);this.searchedItems=null===(i=s.search(null==e?void 0:e.value))||void 0===i?void 0:i.map((t=>t.item))},s=300,ee&&clearTimeout(ee),ee=setTimeout((()=>{i()}),s)},this.handleOutsideClick=t=>{"LIST-POPPER"!==t.target.nodeName&&(this.open=!1,this.searchedItems=null)}}firstUpdated(){this.addEventListener(this.event,this.handleSlotClick)}handleSlotClick(t){this.shadowRoot.querySelector("slot").assignedNodes().includes(t.target)&&(this.shadowRoot.querySelector("#list-root"),this.open=!0)}connectedCallback(){super.connectedCallback(),document.addEventListener("click",this.handleOutsideClick)}disconnectedCallback(){document.removeEventListener("click",this.handleOutsideClick),super.disconnectedCallback()}onLiHover(t){var e,i,s;const n=t.target,r=t.target.getBoundingClientRect();null===(e=n.querySelector("div"))||void 0===e||e.style.setProperty("top",`${r.top}px`),null===(i=n.querySelector("div"))||void 0===i||i.style.setProperty("left",`${r.right}px`),null===(s=n.querySelector("div"))||void 0===s||s.style.setProperty("width",`${r.width}px`)}renderSubItems(t){var e;return Lt`
+`;let ee;let ie={includeScore:!1,shouldSort:!1,threshold:.6,location:0,distance:100,maxPatternLength:32,minMatchCharLength:1,keys:["label","items.label"]};class se extends Zt{constructor(){super(...arguments),this.onSelect=t=>{},this.label="",this.searchable=!1,this.searchPlaceholder="Search...",this.open=!1,this.event="click",this.items=[],this.searchedItems=null,this.onSearchkeyup=t=>{const e=t.target;var i,s;i=()=>{var t,i;if(!(null==e?void 0:e.value))return void(this.searchedItems=[...null!==(t=this.items)&&void 0!==t?t:[]]);const s=new J(this.items,ie);this.searchedItems=null===(i=s.search(null==e?void 0:e.value))||void 0===i?void 0:i.map((t=>t.item))},s=300,ee&&clearTimeout(ee),ee=setTimeout((()=>{i()}),s)},this.handleOutsideClick=t=>{"LIST-POPPER"!==t.target.nodeName&&(this.open=!1,this.searchedItems=null)}}firstUpdated(){this.addEventListener(this.event,this.handleSlotClick)}handleSlotClick(t){this.shadowRoot.querySelector("slot").assignedNodes().includes(t.target)&&(this.shadowRoot.querySelector("#list-root"),this.open=!0)}connectedCallback(){super.connectedCallback(),document.addEventListener("click",this.handleOutsideClick)}disconnectedCallback(){document.removeEventListener("click",this.handleOutsideClick),super.disconnectedCallback()}onLiHover(t){var e,i,s;const n=t.target,r=t.target.getBoundingClientRect();null===(e=n.querySelector("div"))||void 0===e||e.style.setProperty("top",`${r.top}px`),null===(i=n.querySelector("div"))||void 0===i||i.style.setProperty("right",`${r.left+28}px`),null===(s=n.querySelector("div"))||void 0===s||s.style.setProperty("width",`${r.width}px`)}renderSubItems(t){var e;return Lt`
       <div id="list-inner">
         <ul>
           ${null===(e=null==t?void 0:t.items)||void 0===e?void 0:e.map((e=>Lt`<li
